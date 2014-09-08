@@ -1,0 +1,23 @@
+# PostgreSQL. Versions 8.2 and up are supported.
+# Use 'createuser -s postgres' to create a general purpose db (super)user.
+
+development: &default
+  adapter: postgresql
+  encoding: unicode
+  database: pushertc_development
+  username: postgres
+  pool: 5
+  timeout: 5000
+
+test:
+  <<: *default
+  database: pushertc_test
+  min_messages: warning
+
+acceptance:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>

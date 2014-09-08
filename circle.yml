@@ -1,0 +1,19 @@
+test:
+  override:
+    - bundle exec rake spec:without_features spec:features
+    - bundle exec guard-jasmine
+  post:
+    - bundle exec rake db:sample_data
+
+deployment:
+  acceptance:
+    branch: development
+    commands:
+      - ./bin/deploy.sh pushertc-acceptance:
+          timeout: 360
+
+  production:
+    branch: master 
+    commands:
+      - ./bin/deploy.sh pushertc:
+          timeout: 360
