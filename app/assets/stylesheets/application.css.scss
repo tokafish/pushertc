@@ -1,3 +1,61 @@
+@import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import '_navbar';
 @import '_footer';
+
+#localVideo {
+  -moz-transform: scaleX(-1);
+   -o-transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   transform: scaleX(-1);
+   filter: FlipH;
+   -ms-filter: "FlipH";
+}
+
+#remoteVideos video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  background-size: cover;
+}
+
+#allVideos {
+  position: fixed;
+  margin: 0;
+  left: 5px;
+  bottom: 0;
+
+  li {
+    position: relative;
+    padding: 0 5px 0 0;
+  }
+  video {
+    width: 160px;
+    height: 90px;
+  }
+
+  .name {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    right: 5px;
+    bottom: 5px;
+    background-color: black;
+    padding: 2px 5px;
+  }
+}
+#messages {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  right: 0;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+}

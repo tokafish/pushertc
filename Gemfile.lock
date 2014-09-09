@@ -116,6 +116,7 @@ GEM
       rack (>= 1.4.5)
     hike (1.2.3)
     http_parser.rb (0.6.0)
+    httpclient (2.4.0)
     i18n (0.6.11)
     jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
@@ -150,6 +151,10 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pusher (0.14.1)
+      httpclient (~> 2.3)
+      multi_json (~> 1.0)
+      signature (~> 0.1.6)
     quiet_assets (1.0.3)
       railties (>= 3.1, < 5.0)
     rack (1.5.2)
@@ -206,6 +211,7 @@ GEM
       sass (~> 3.2.0)
       sprockets (~> 2.8, <= 2.11.0)
       sprockets-rails (~> 2.0)
+    signature (0.1.7)
     simple_form (3.1.0.rc2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -283,6 +289,7 @@ DEPENDENCIES
   launchy
   pg
   poltergeist
+  pusher
   quiet_assets
   rack-canonical-host
   rails (~> 4.1.5)

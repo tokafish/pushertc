@@ -17,3 +17,6 @@
 
 # Ignore compiled assets.
 /public/assets
+
+.DS_Store
+.envrc
